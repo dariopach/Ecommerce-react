@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart'
 import Checkout from './components/Checkout/Checkout';
-import { NotifactionProvider } from './notification/NotificationService';
-
 
 
 function App() {
@@ -16,7 +14,6 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <NotifactionProvider>
         <CartProvider>
           <NavBar />
           <Routes>
@@ -28,7 +25,6 @@ function App() {
             <Route path='*' element={<h1>404 NOT FOUND</h1>} />
           </Routes> 
         </CartProvider> 
-        </NotifactionProvider>
       </BrowserRouter>  
     </div>
   )

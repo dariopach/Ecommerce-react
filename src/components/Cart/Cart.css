@@ -1,0 +1,82 @@
+.Cart {
+    margin-top: 20px;
+  }
+  
+  .Cart h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .Cart .Option {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .Cart .CartItem {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .Cart .CartItem img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .Cart .CartItem .ItemInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Cart .CartItem .ItemInfo h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .Cart .CartItem .ItemInfo p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .Cart .Total {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .Cart .Total h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .Cart .Button {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Cart .Button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Cart .Option {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }

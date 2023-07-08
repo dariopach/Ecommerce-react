@@ -1,0 +1,12 @@
+.ItemDetailContainer {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .ItemDetailContainer .Loading {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+  }
