@@ -1,37 +1,46 @@
 .Titulo {
-    font-size: 3rem;
-    color: rgb(53, 46, 46);
-    margin: 0;
+  font-size: 3rem;
+  color: black;
+  margin: 0;
 }
 
 .NavBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f8f8f8;
-  }
-  
-  
-  .NavBar .Categories {
-    display: flex;
-  }
-  
-  .NavBar .Option {
-    margin-right: 10px;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .NavBar .Option:hover {
-    color: #007bff;
-  }
-  
-  .NavBar .ActiveOption {
-    color: #007bff;
-  }
-  
-  .NavBar .CartWidget {
-    margin-left: 10px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #a19e9e;
+  flex-direction: column;
+}
+
+
+.NavBar .Categories {
+  display: flex;
+}
+
+.NavBar .Option {
+  margin-right: 10px;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.NavBar .Option:hover {
+  background-color: #a09797;
+  color: #fff;
+}
+
+.NavBar .Option:hover {
+  color: #d0deee;
+}
+
+.NavBar .ActiveOption {
+  color: #007bff;
+}
+
+.NavBar .CartWidget {
+  margin-left: 10px;
+}

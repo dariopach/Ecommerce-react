@@ -9,9 +9,9 @@ export const CartProvider = ({ children }) => {
     console.log(cart)
 
     const addItem = (item, quantity) => {
-        if(!isInCart(item.id)) {
+        if (!isInCart(item.id)) {
             setCart(prev => {
-                return [...prev,{...item, quantity}]
+                return [...prev, { ...item, quantity }]
             })
         } else {
             console.error('Ya esta agregado')
@@ -53,7 +53,7 @@ export const CartProvider = ({ children }) => {
 
     const total = getTotal()
 
-   
+
 
     return (
         <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, totalQuantity, total }}>

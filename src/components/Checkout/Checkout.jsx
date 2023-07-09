@@ -47,7 +47,7 @@ const Checkout = () => {
                 } else {
                     outOfStock.push({ id: doc.id, ...fieldsDoc })
                 }
-            });
+            })
 
             if (outOfStock.length === 0) {
                 await batch.commit()

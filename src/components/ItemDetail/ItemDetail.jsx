@@ -20,9 +20,9 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
         addItem(item, quantity)
         setNotification('success', `Se agrego correctamente ${quantity} ${name} al carrito`, 3)
-    
+
     }
-    
+
     return (
         <article className='CardItem'>
             <header className='Header'>
@@ -31,7 +31,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 </h2>
             </header>
             <picture>
-                <img src={img} alt={name} className='ItemImg'/>
+                <img src={img} alt={name} className='ItemImg' />
             </picture>
             <section>
                 <p className='Info'>
@@ -49,7 +49,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                     quantityAdded > 0 ? (
                         <Link to='/cart' className='Option'>Pasar a pagar</Link>
                     ) : (
-                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>
+                        <ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
                     )
                 }
             </footer>

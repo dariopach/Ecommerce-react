@@ -5,12 +5,13 @@ const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
     const [email, setEmail] = useState('')
+    const [direction, setDeliveryDirection] = useState('')
 
     const handleConfirm = (event) => {
         event.preventDefault()
 
         const userData = {
-            name, phone, email
+            name, phone, email, direction
         };
 
         onConfirm(userData)
@@ -24,8 +25,22 @@ const CheckoutForm = ({ onConfirm }) => {
                     <input
                         className='Input'
                         type='text'
+                        placeholder="Juan Perez"
+                        required
                         value={name}
                         onChange={({ target }) => setName(target.value)}
+                    />
+                </label>
+
+                <label className='Label'>
+                    Dirección de entrega
+                    <input
+                        className='Input'
+                        type='text'
+                        placeholder="Calle falsa 1234, ap 101"
+                        required
+                        value={direction}
+                        onChange={({ target }) => setDeliveryDirection(target.value)}
                     />
                 </label>
 
@@ -34,6 +49,8 @@ const CheckoutForm = ({ onConfirm }) => {
                     <input
                         className='Input'
                         type='text'
+                        placeholder="123456789"
+                        required
                         value={phone}
                         onChange={({ target }) => setPhone(target.value)}
                     />
@@ -44,6 +61,8 @@ const CheckoutForm = ({ onConfirm }) => {
                     <input
                         className='Input'
                         type='text'
+                        placeholder="ejemplo@coder.com"
+                        required
                         value={email}
                         onChange={({ target }) => setEmail(target.value)}
                     />

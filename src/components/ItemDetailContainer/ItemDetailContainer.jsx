@@ -1,42 +1,29 @@
 import './ItemDetailContainer.css'
-import { useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
-
-import { getDoc, doc } from 'firebase/firestore'
-import { db } from '../../services/firebase/firebaseConfig'
+import { useAsync } from '../../hooks/useAsync'
+import { getProductById } from '../../services/firebase/firestore/products'
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-    const [loading, setLoading] = useState(true)
+  const { itemId } = useParams();
 
-    const { itemId } = useParams()
+  const productById = () => getProductById(itemId)
 
-    useEffect(() => {
-        setLoading(true)
+  const { data: product, error, loading } = useAsync(productById, [itemId])
 
-        const docRef = doc(db, 'products', itemId)
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
 
-        getDoc(docRef)
-            .then(response => {
-                const data = response.data()
-                const productAdapted = { id: response.id, ...data }
-                setProduct(productAdapted)
-            })
+  if (error) {
+    return <h1>Hubo un error, por favor recargue la página</h1>
+  }
 
-            .catch(error => {
-                console.error(error)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [itemId])
-    
-    return(
-        <div className='ItemDetailContainer'>
-            <ItemDetail {...product} />
-        </div>
-    )
+  return (
+    <div className='ItemDetailContainer'>
+      <ItemDetail {...product} />
+    </div>
+  )
 }
 
 export default ItemDetailContainer

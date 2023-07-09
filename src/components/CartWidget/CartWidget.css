@@ -1,12 +1,12 @@
 .CartWidget {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #000;
-  }
-  
-  .CartImg {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.CartImg {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

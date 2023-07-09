@@ -7,7 +7,7 @@ export const useAsync = (asyncFunction, dependencies = []) => {
 
     useEffect(() => {
         setLoading(true)
-        
+
         asyncFunction()
             .then(response => {
                 setData(response)
@@ -17,7 +17,7 @@ export const useAsync = (asyncFunction, dependencies = []) => {
             })
             .finally(() => {
                 setLoading(false)
-            }) 
+            })
     }, [...dependencies])
 
     return {
